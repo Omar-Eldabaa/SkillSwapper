@@ -1,0 +1,25 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow Background (اختياري) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#1A000000" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+
+    <!-- Main Background -->
+    <item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#4FC3F7"
+                android:endColor="#0288D1"
+                android:angle="135"/>
+            <corners android:radius="24dp"/>
+            <padding
+                android:left="18dp"
+                android:top="18dp"
+                android:right="18dp"
+                android:bottom="18dp"/>
+        </shape>
+    </item>
+</layer-list>

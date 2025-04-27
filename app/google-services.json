@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "614898812927",
+    "project_id": "skillswapper-3c843",
+    "storage_bucket": "skillswapper-3c843.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614898812927:android:fa1cd000ba1b34bd0749ca",
+        "android_client_info": {
+          "package_name": "com.example.skillswapper"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjdvsCJ8-WbAO9Dx_RaVEBhYjnvulWtFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

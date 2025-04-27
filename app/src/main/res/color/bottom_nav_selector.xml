@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/primaryColor" android:state_checked="true" />
+    <item android:color= "#D1A7E1" android:state_checked="false" />
+</selector>
+<!--    #D1A7E1 بنفسجي خفيف-->
+<!--    "#81C784" اخضر فاتح-->

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "programming",
+    "name": "Programming",
+    "skills": [
+      "Kotlin",
+      "Java",
+      "Python",
+      "C++",
+      "JavaScript",
+      "React",
+      "Node.js"
+    ]
+  },
+  {
+    "id": "design",
+    "name": "Design",
+    "skills": [
+      "UI/UX Design",
+      "Adobe Photoshop",
+      "Figma",
+      "Adobe XD",
+      "Illustrator"
+    ]
+  },
+  {
+    "id": "marketing",
+    "name": "Marketing",
+    "skills": [
+      "Digital Marketing",
+      "SEO",
+      "Content Writing",
+      "Social Media Management"
+    ]
+  },
+  {
+    "id": "business",
+    "name": "Business",
+    "skills": [
+      "Entrepreneurship",
+      "Project Management",
+      "Finance Basics",
+      "Negotiation"
+    ]
+  },
+  {
+    "id": "languages",
+    "name": "Languages",
+    "skills": [
+      "English",
+      "Arabic",
+      "French",
+      "Spanish",
+      "German"
+    ]
+  },
+  {
+    "id": "data_science",
+    "name": "Data Science",
+    "skills": [
+      "Data Analysis",
+      "Machine Learning",
+      "Pandas",
+      "NumPy",
+      "TensorFlow"
+    ]
+  },
+  {
+    "id": "soft_skills",
+    "name": "Soft Skills",
+    "skills": [
+      "Communication",
+      "Teamwork",
+      "Problem Solving",
+      "Time Management"
+    ]
+  }
+]

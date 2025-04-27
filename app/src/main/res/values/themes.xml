@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SkillSwapper" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+<!--         <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.SkillSwapper" parent="Base.Theme.SkillSwapper" />
+
+    <style name="ModernDialogStyle" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">#FFFFFF</item> <!-- لون النص -->
+        <item name="android:textColorSecondary">#BBDEFB</item> <!-- لون التفاصيل -->
+        <item name="android:buttonBarPositiveButtonStyle">@style/ModernPositiveButton</item>
+<!--        <item name="android:buttonBarNegativeButtonStyle">@style/ModernNegativeButton</item>-->
+    </style>
+
+    <style name="ModernPositiveButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+
+
+    </style>
+
+    <style name="ModernNegativeButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#E0E0E0</item>
+    </style>
+
+    <style name="AppSpinnerTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:popupBackground">#FFFFFF</item>
+        <item name="android:textColorPrimary">#2C3E50</item>
+        <item name="android:textColorHint">#95A5A6</item>
+    </style>
+
+</resources>
