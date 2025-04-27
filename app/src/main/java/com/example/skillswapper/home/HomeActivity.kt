@@ -27,7 +27,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent, options.toBundle())
         }
     }
-
+// add 1 feature
     private fun initViews() {
         viewModel=ViewModelProvider(this)[HomeActivityViewModel::class.java]
     }
