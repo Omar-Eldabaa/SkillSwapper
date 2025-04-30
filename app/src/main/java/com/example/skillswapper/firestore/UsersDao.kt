@@ -2,6 +2,7 @@ package com.example.skillswapper.firestore
 
 import com.example.skillswapper.model.User
 import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.DocumentSnapshot
@@ -23,5 +24,15 @@ object UsersDao {
     fun getUser(uid:String?,onCompleteListener:OnCompleteListener<DocumentSnapshot>){
         getUserCollection().document(uid?:"")
             .get().addOnCompleteListener(onCompleteListener)
+    }
+
+    fun getUserTask(userId: String): Task<User?> {
+        val db = Firebase.firestore
+        return db.collection("users")
+            .document(userId)
+            .get()
+            .continueWith { task ->
+                task.result?.toObject(User::class.java)
+            }
     }
 }

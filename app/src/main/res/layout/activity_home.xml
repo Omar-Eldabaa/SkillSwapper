@@ -13,8 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primaryColor"
-        android:elevation="4dp"
+        android:translationZ="8dp"
         app:titleCentered="true"
+        style="@style/ToolbarStyle"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView

@@ -7,5 +7,5 @@ data class UserSkillsSetup(
     val desiredSkills: List<String> = listOf(),
     val desiredCategory: String? = null,
     val preferredLanguage: String? = null,
-    val bio: String? = null
+    val bio: String? = null,
 )

@@ -5,4 +5,21 @@
     <color name="primaryTextColor">#0A365A</color>
     <color name="primaryColor">#3F51B5</color>
     <color name="gray">#423D3D</color>
+    <color name="greenWhite">#C7EDC9</color>
+
+
+
+    <color name="match_high">#4CAF50</color>       <!-- أخضر للتطابق العالي -->
+    <color name="match_medium">#FFC107</color>     <!-- أصفر -->
+    <color name="match_low">#F44336</color>        <!-- أحمر للتطابق الضعيف -->
+    <color name="cardBackground">#FAFAFA</color>
+    <color name="primaryText">#263238</color>
+    <color name="secondaryText">#607D8B</color>
+
+    <color name="green">#4CAF50</color>      <!-- Perfect -->
+    <color name="orange">#FF9800</color>     <!-- Good -->
+
+
+
+
 </resources>

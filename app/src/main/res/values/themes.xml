@@ -32,4 +32,17 @@
         <item name="android:textColorHint">#95A5A6</item>
     </style>
 
+    <style name="ToolbarStyle" parent="Widget.MaterialComponents.Toolbar">
+        <item name="backgroundTint">@color/primaryColor</item> <!-- الخلفية نفس اللون -->
+        <item name="elevation">8dp</item> <!-- شادو واضح -->
+        <item name="shapeAppearanceOverlay">@style/ToolbarShapeAppearance</item> <!-- ربط بالزاوية -->
+    </style>
+
+    <style name="ToolbarShapeAppearance" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item> <!-- نوع الزوايا -->
+        <item name="cornerSizeBottomLeft">16dp</item> <!-- زاوية تحت شمال -->
+        <item name="cornerSizeBottomRight">16dp</item> <!-- زاوية تحت يمين -->
+    </style>
+
+
 </resources>

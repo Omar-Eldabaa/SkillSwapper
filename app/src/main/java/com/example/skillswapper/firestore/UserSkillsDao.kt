@@ -2,6 +2,7 @@ package com.example.skillswapper.firestore
 
 import com.example.skillswapper.model.UserSkillsSetup
 import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
@@ -45,4 +46,13 @@ object UserSkillsDao {
                 )
             }
     }
+
+    fun getUserSkillsTask(userId: String): Task<UserSkillsSetup?> {
+        return getUserSkillsDocument(userId)
+            .get()
+            .continueWith { task ->
+                task.result?.toObject(UserSkillsSetup::class.java)
+            }
+    }
+
 }
