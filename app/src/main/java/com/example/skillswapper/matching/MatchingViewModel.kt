@@ -1,8 +1,10 @@
 package com.example.skillswapper.matching
 
 import androidx.lifecycle.*
+import com.example.skillswapper.firestore.ChatDao
 import com.example.skillswapper.firestore.UserSkillsDao
 import com.example.skillswapper.firestore.UsersDao
+import com.example.skillswapper.model.Message
 import com.example.skillswapper.model.User
 import com.example.skillswapper.recommendationSystem.MatchingUser
 import com.example.skillswapper.recommendationSystem.RecommendationSystem
@@ -86,4 +88,39 @@ class MatchingViewModel : ViewModel() {
             _isLoading.value = false
         }
     }
+
+
+
+    fun sendMessageToUser(receiverId: String, messageText: String) {
+        val currentUserId = FirebaseAuth.getInstance().currentUser?.uid
+        if (currentUserId == null) {
+            _errorMessage.value = "User not authenticated"
+            return
+        }
+
+        viewModelScope.launch {
+            try {
+                val chatId = withContext(Dispatchers.IO) {
+                    ChatDao.getOrCreateChatId(currentUserId, receiverId).await()
+                }
+
+                val message = Message(
+                    senderId = currentUserId,
+                    receiverId = receiverId,
+                    content = messageText,
+                    timestamp = System.currentTimeMillis()
+                )
+
+                withContext(Dispatchers.IO) {
+                    ChatDao.sendMessage(chatId, message).await()
+                }
+
+                _errorMessage.value = "Message sent successfully"
+
+            } catch (e: Exception) {
+                _errorMessage.value = "Failed to send message: ${e.message}"
+            }
+        }
+    }
+
 }

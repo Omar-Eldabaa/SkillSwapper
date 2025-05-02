@@ -73,8 +73,8 @@ class MatchingUsersAdapter : ListAdapter<MatchingUser, MatchingUsersAdapter.Reco
 
             // عرض صورة المستخدم (افتراضياً placeholder)
             binding.profileImage.setImageResource(R.drawable.ic_user_placeholder)
-            binding.requestButton.setOnClickListener {
-
+            binding.sendMessageButton.setOnClickListener {
+                listener.onSendMessageClick(user)
             }
             binding.viewProfileButton.setOnClickListener {
                     listener.onViewProfileClick(user.userSkills.userId?:"")
@@ -95,5 +95,6 @@ class MatchingUsersAdapter : ListAdapter<MatchingUser, MatchingUsersAdapter.Reco
 
 interface OnProfileClickListener {
     fun onViewProfileClick(userId: String)
+    fun onSendMessageClick(user: MatchingUser)
 }
 

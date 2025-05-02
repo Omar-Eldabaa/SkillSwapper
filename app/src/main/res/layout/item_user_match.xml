@@ -104,11 +104,13 @@
             android:layout_marginTop="8dp">
 
             <Button
-                android:id="@+id/requestButton"
+                android:id="@+id/sendMessageButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Request"
+                android:text="Send Message"
+                android:drawableEnd="@drawable/send_ic"
+                android:drawableTint="@color/white"
                 android:backgroundTint="@color/match_high"
                 android:textColor="@android:color/white"
                 android:paddingStart="12dp"
