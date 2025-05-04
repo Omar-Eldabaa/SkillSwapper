@@ -23,15 +23,7 @@ class HomeActivity : AppCompatActivity() {
         viewBinding =ActivityHomeBinding.inflate(LayoutInflater.from(this))
         setContentView(viewBinding.root)
         initViews()
-        viewBinding.settingsButton.setOnClickListener {
-            val intent = Intent(this, SettingsActivity::class.java)
-            val options = ActivityOptionsCompat.makeCustomAnimation(
-                this,
-                android.R.anim.slide_in_left,
-                android.R.anim.slide_out_right
-            )
-            startActivity(intent, options.toBundle())
-        }
+
     }
     private fun initViews() {
         viewModel=ViewModelProvider(this)[HomeActivityViewModel::class.java]

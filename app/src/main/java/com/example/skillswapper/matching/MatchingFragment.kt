@@ -6,12 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.skillswapper.databinding.FragmentMatchingBinding
 import com.example.skillswapper.profileActivity.ProfileActivity
 import com.example.skillswapper.recommendationSystem.MatchingUser
+import com.example.skillswapper.settings.SettingsActivity
 
 class MatchingFragment : Fragment() {
 
@@ -75,9 +77,15 @@ class MatchingFragment : Fragment() {
 
 
         }
-
-
-
+        binding.settingsButton.setOnClickListener {
+            val intent = Intent(requireContext(), SettingsActivity::class.java)
+            val options = ActivityOptionsCompat.makeCustomAnimation(
+                requireContext(),
+                android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right
+            )
+            startActivity(intent, options.toBundle())
+        }
 
 
     }

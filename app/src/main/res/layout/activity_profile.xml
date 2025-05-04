@@ -132,18 +132,5 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:chipSpacing="8dp" />
-
-        <!-- زر إرسال الطلب -->
-        <Button
-            android:id="@+id/sendMessageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Send Request"
-            android:layout_marginTop="24dp"
-            android:backgroundTint="@color/match_high"
-            android:textColor="@android:color/white"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp" />
-
     </LinearLayout>
 </ScrollView>
