@@ -5,7 +5,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.skillswapper.firestore.ChatDao
+import com.example.skillswapper.firestore.SessionsDao
 import com.example.skillswapper.model.Message
+import com.example.skillswapper.model.Session
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.QuerySnapshot
 
@@ -42,4 +44,23 @@ class ChatDetailsViewModel(application: Application) : AndroidViewModel(applicat
             }
         }
     }
+
+
+
+    fun createSession(
+        receiverId: String,
+        scheduledTime: Long,
+        onSuccess: () -> Unit,
+        onFailure: (Exception) -> Unit
+    ) {
+        val session = Session(
+            senderId = currentUserId,
+            receiverId = receiverId,
+            scheduledTime = scheduledTime,
+            status = "pending"
+        )
+
+        SessionsDao.createSession(session, onSuccess, onFailure)
+    }
+
 }

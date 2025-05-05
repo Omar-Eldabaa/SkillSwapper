@@ -6,6 +6,7 @@
     <color name="primaryColor">#3F51B5</color>
     <color name="gray">#423D3D</color>
     <color name="greenWhite">#C7EDC9</color>
+    <color name="greenWhite0">#61EA68</color>
     <color name="greenWhite2">#E6FFE8</color>
 
 
@@ -18,6 +19,7 @@
 
     <color name="green">#4CAF50</color>      <!-- Perfect -->
     <color name="orange">#FF9800</color>     <!-- Good -->
+    <color name="scheduled_card_background">#73ECFC</color> <!-- Light Cyan -->
 
 
 

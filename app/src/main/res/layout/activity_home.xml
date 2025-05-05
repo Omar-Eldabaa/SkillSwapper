@@ -7,39 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".home.HomeActivity">
 
-    <!-- Top App Bar -->
-<!--    <com.google.android.material.appbar.MaterialToolbar-->
-<!--        android:id="@+id/toolbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@color/primaryColor"-->
-<!--        android:translationZ="8dp"-->
-<!--        app:titleCentered="true"-->
-<!--        style="@style/ToolbarStyle"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/toolbarTitle"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="SkillSwapper"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="20sp"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:textStyle="bold"/>-->
-
-<!--        <ImageButton-->
-<!--            android:id="@+id/settingsButton"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:src="@drawable/settings_ic"-->
-<!--            android:background="?attr/selectableItemBackgroundBorderless"-->
-<!--            android:layout_gravity="start"-->
-<!--            android:contentDescription="settings"-->
-<!--            android:tint="@color/white"-->
-<!--            android:padding="8dp" />-->
-
-<!--    </com.google.android.material.appbar.MaterialToolbar>-->
 
 
     <!-- Fragment Container -->
