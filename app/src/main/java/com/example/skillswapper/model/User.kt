@@ -5,5 +5,4 @@ data class User(
     val userName:String?=null,
     val email:String?=null,
     val profileImageUrl: String? = null
-
 )

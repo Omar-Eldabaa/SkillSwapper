@@ -3,6 +3,7 @@ package com.example.skillswapper.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.core.app.ActivityOptionsCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.skillswapper.databinding.ActivityLoginBinding

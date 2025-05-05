@@ -130,3 +130,10 @@ fun Activity.showLoadingProgressDialog(message: String ,isCancelable: Boolean=tr
     return alertDialog
 
 }
+fun Fragment.showLoadingProgressDialog(message: String ,isCancelable: Boolean=true):AlertDialog{
+    val alertDialog = ProgressDialog(requireContext())
+    alertDialog.setMessage(message)
+    alertDialog.setCancelable(isCancelable)
+    return alertDialog
+
+}

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/cardBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- صورة المستخدم مع أيقونة تعديل -->
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_user_placeholder"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_background"
+                android:padding="4dp" />
+
+            <ImageView
+                android:id="@+id/editProfileImageIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_camera"
+                android:padding="4dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="4dp" />
+        </FrameLayout>
+
+        <!-- الاسم -->
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/green" />
+
+        <!-- اللغة المفضلة -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preferred Language:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/preferredLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="English"
+            android:textSize="14sp"
+            android:textColor="@color/secondaryText"
+            android:layout_marginTop="4dp" />
+
+        <!-- البايو -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bio:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This user is passionate about learning and sharing skills!"
+            android:textSize="15sp"
+            android:textColor="@color/primaryText"
+            android:padding="8dp"
+            android:background="@color/greenWhite"
+            android:layout_marginTop="4dp" />
+
+        <!-- المهارات اللي بيتقنها -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skills He Can Teach:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"
+            android:layout_marginTop="24dp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/knownSkillsGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:singleLine="false"
+            app:chipSpacing="8dp" />
+
+        <!-- المهارات اللي عايز يتعلمها -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skills He Wants to Learn:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"
+            android:layout_marginTop="24dp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/desiredSkillsGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:singleLine="false"
+            app:chipSpacing="8dp" />
+
+        <!-- زر تعديل -->
+        <Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/green"
+            android:textColor="@android:color/white"
+            android:drawableEnd="@drawable/ic_edit"
+            android:drawableTint="@color/white"
+            android:padding="12dp" />
+
+    </LinearLayout>
+</ScrollView>

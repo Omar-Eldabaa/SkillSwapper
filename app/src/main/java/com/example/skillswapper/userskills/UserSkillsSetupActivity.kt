@@ -30,17 +30,6 @@ class UserSkillsSetupActivity : AppCompatActivity() {
         setContentView(viewBinding.root)
         initViews()
         subscribeToLiveData()
-//        viewBinding.btnSave.setOnClickListener {
-//            val knownSkills = getSelectedSkills(viewBinding.skillsContainer)
-//            val desiredSkills = getSelectedSkills(viewBinding.skillsContainerDesired)
-//
-//            if (viewModel.isValidSelection(knownSkills, desiredSkills)) {
-//                // Proceed to save in Firestore or next step
-//                Toast.makeText(this, "Valid data! Proceeding...", Toast.LENGTH_SHORT).show()
-//            } else {
-//                Toast.makeText(this, "Please select at least one known and one desired skill.", Toast.LENGTH_SHORT).show()
-//            }
-//        }
 
         viewBinding.btnSave.setOnClickListener {
             val knownSkills = getSelectedSkills(viewBinding.skillsContainer)

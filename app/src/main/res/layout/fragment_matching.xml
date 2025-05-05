@@ -36,12 +36,12 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
             <ImageButton
-                android:id="@+id/settingsButton"
+                android:id="@+id/logout_btn"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/settings_ic"
-                android:contentDescription="Settings"
+                android:src="@drawable/logout_ic"
+                android:contentDescription="Log out"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -76,5 +76,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

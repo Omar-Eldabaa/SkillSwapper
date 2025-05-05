@@ -19,7 +19,8 @@
 
     <color name="green">#4CAF50</color>      <!-- Perfect -->
     <color name="orange">#FF9800</color>     <!-- Good -->
-    <color name="scheduled_card_background">#73ECFC</color> <!-- Light Cyan -->
+    <color name="scheduled_card_background">#73ECFC</color>
+    <color name="splash_color">#7CE0FF</color><!-- Light Cyan -->
 
 
 

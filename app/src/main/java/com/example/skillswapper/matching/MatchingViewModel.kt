@@ -1,6 +1,8 @@
 package com.example.skillswapper.matching
 
 import androidx.lifecycle.*
+import com.example.chatapp.common.SingleLiveEvent
+import com.example.skillswapper.SessionProvider
 import com.example.skillswapper.firestore.ChatDao
 import com.example.skillswapper.firestore.UserSkillsDao
 import com.example.skillswapper.firestore.UsersDao
@@ -8,7 +10,9 @@ import com.example.skillswapper.model.Message
 import com.example.skillswapper.model.User
 import com.example.skillswapper.recommendationSystem.MatchingUser
 import com.example.skillswapper.recommendationSystem.RecommendationSystem
+import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
@@ -26,6 +30,11 @@ class MatchingViewModel : ViewModel() {
     val errorMessage: LiveData<String> get() = _errorMessage
 
     private val userId = FirebaseAuth.getInstance().currentUser?.uid
+
+    val messageLiveData = SingleLiveEvent<com.example.skillswapper.Message>()
+    val loadingLiveData = MutableLiveData<com.example.skillswapper.Message?>()
+    val event = SingleLiveEvent<MatchingViewEvent>()
+
 
     fun getUsers() {
         if (userId == null) {
@@ -122,5 +131,25 @@ class MatchingViewModel : ViewModel() {
             }
         }
     }
+
+    fun logOut(){
+        messageLiveData.postValue(com.example.skillswapper.Message(
+            message = "Are you sure to log out?",
+            posActionName = "Yes",
+            posActionClick = {
+                loadingLiveData.postValue(com.example.skillswapper.Message(
+                    message = "loading...."
+                    , isCancelable = false
+                ))
+                Firebase.auth.signOut()
+                SessionProvider.user=null
+                event.postValue(MatchingViewEvent.NavigateToLogin)
+            } ,
+            negActionName = "Cancel"
+        ))
+        loadingLiveData.postValue(null)
+
+    }
+
 
 }

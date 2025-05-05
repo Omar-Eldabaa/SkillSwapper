@@ -6,14 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.skillswapper.databinding.FragmentMatchingBinding
+import com.example.skillswapper.login.LoginActivity
 import com.example.skillswapper.profileActivity.ProfileActivity
 import com.example.skillswapper.recommendationSystem.MatchingUser
-import com.example.skillswapper.settings.SettingsActivity
+import com.example.skillswapper.showLoadingProgressDialog
+import com.example.skillswapper.showMessage
 
 class MatchingFragment : Fragment() {
 
@@ -77,18 +78,56 @@ class MatchingFragment : Fragment() {
 
 
         }
-        binding.settingsButton.setOnClickListener {
-            val intent = Intent(requireContext(), SettingsActivity::class.java)
-            val options = ActivityOptionsCompat.makeCustomAnimation(
-                requireContext(),
-                android.R.anim.slide_in_left,
-                android.R.anim.slide_out_right
-            )
-            startActivity(intent, options.toBundle())
+
+        binding.logoutBtn.setOnClickListener{
+                viewModel.logOut()
         }
+
+         var loadingDialog:android.app.AlertDialog?=null
+
+        viewModel.loadingLiveData.observe(viewLifecycleOwner){
+            if (it==null){
+                //Hide
+                loadingDialog?.dismiss()
+                loadingDialog =null
+            }else{
+                //Show
+                loadingDialog=showLoadingProgressDialog(
+                    message = it.message?:"",
+                    isCancelable =it.isCancelable
+
+                )
+                loadingDialog?.show()
+            }
+
+        }
+        viewModel.messageLiveData.observe(viewLifecycleOwner) { message ->
+            showMessage(
+                message.message ?: "Something went wrong",
+                posActionName = "Ok",
+                posAction = message.posActionClick,
+                negActionName = message.negActionName,
+                neAction = message.negActionClick,
+                isCancelable = message.isCancelable
+            )
+        }
+        viewModel.event.observe(viewLifecycleOwner){
+            when(it){
+                MatchingViewEvent.NavigateToLogin->{
+                    navigateToLogin()
+                }
+
+            }
+            }
 
 
     }
+
+    private fun navigateToLogin() {
+        val intent =Intent(requireContext(),LoginActivity::class.java)
+        startActivity(intent)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

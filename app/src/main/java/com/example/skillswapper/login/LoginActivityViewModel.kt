@@ -32,7 +32,6 @@ class LoginActivityViewModel:ViewModel() {
         auth.signInWithEmailAndPassword(emailLv.value!!, passwordLv.value!!)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
-                    isLoading.postValue(false)
                     getUserFromFirestore(it.result.user?.uid)
 
                 } else {
@@ -41,6 +40,7 @@ class LoginActivityViewModel:ViewModel() {
                     messageLiveData.postValue(
                         Message(message = it.exception?.localizedMessage)
                     )
+                    isLoading.postValue(false)
 
                 }
             }
