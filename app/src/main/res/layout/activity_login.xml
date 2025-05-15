@@ -30,11 +30,12 @@
                 <!-- Logo -->
                 <ImageView
                     android:id="@+id/logo"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:layout_marginTop="40dp"
                     android:contentDescription="App Logo"
-                    android:src="@drawable/logo"
+                    android:src="@drawable/swap_ic"
+                    android:background="@color/primaryColor"
                     android:scaleType="fitCenter"
                     android:adjustViewBounds="true"
                     android:layout_gravity="center_horizontal"

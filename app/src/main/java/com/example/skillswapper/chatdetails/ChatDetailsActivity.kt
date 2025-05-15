@@ -106,7 +106,6 @@ class ChatDetailsActivity : AppCompatActivity() {
 
             val timestamp = calendar.timeInMillis
 
-            // 👉 هنا هتبعت السيشن لليوزر التاني وتخزنها في Firebase
             sendSessionRequestToOtherUser(timestamp)
 
             dialog.dismiss()
